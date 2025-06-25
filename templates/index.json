@@ -10,7 +10,7 @@
 {
   "sections": {
     "hero_slideshow": {
-      "type": "advanced-hero",
+      "type": "luxury-hero",
       "blocks": {
         "slide_living_room": {
           "type": "slide",
@@ -428,7 +428,7 @@
       }
     },
     "featured_products_tabs": {
-      "type": "collection-tabs",
+      "type": "premium-product-showcase",
       "blocks": {
         "new_arrivals": {
           "type": "collection",
@@ -458,28 +458,12 @@
         "sale_items"
       ],
       "settings": {
-        "section_width": "container",
-        "subheading": "Discover Our Collections",
-        "heading": "Featured Furniture",
-        "heading_tag": "h2",
-        "heading_size_section": "h2",
-        "description": "<p>Explore our most popular pieces, latest arrivals, and special offers. Each item is carefully selected for quality, style, and value.</p>",
-        "enable_uppercase": false,
-        "tabs_font_family": "heading_font",
-        "layout": "vertical",
-        "enable_stack_products": true,
-        "show_progress_bar": false,
-        "enable_overflow_visible": false,
+        "subheading": "Featured Collections",
+        "heading": "Discover Our Finest Furniture",
+        "description": "<p>Explore our curated selection of premium furniture pieces, each one carefully chosen for exceptional quality, timeless design, and lasting comfort.</p>",
         "products_to_show": 8,
-        "columns_desktop": 4,
-        "column_gap": 2.5,
-        "columns_mobile": "2",
-        "column_gap_mobile": 1.5,
-        "swipe_on_mobile": true,
-        "bg_color": "#ffffff",
-        "text_color": "#2c3e50",
-        "padding_top": 80,
-        "padding_bottom": 80
+        "show_rating": true,
+        "bg_color": "#faf9f7"
       }
     },
     "customer_testimonials": {
