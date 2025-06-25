@@ -67,15 +67,19 @@
                 <div class="interactive-showcase__product-image">
                   <a href="{{ product.url }}">
                     {%- if product.featured_media -%}
-                      <img src="{{ product.featured_media | image_url: width: 400 }}" 
+                      <img src="{{ product.featured_media | image_url: width: 400 }}"
                            alt="{{ product.title }}"
                            loading="lazy"
+                           width="400"
+                           height="400"
                            class="interactive-showcase__image-primary">
-                      
+
                       {%- if product.media[1] -%}
-                        <img src="{{ product.media[1] | image_url: width: 400 }}" 
+                        <img src="{{ product.media[1] | image_url: width: 400 }}"
                              alt="{{ product.title }}"
                              loading="lazy"
+                             width="400"
+                             height="400"
                              class="interactive-showcase__image-hover">
                       {%- endif -%}
                     {%- else -%}
@@ -237,7 +241,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 {% schema %}
 {
-  "name": "Interactive Product Showcase",
+  "name": "Product Showcase",
   "tag": "section",
   "class": "section",
   "settings": [
@@ -330,7 +334,7 @@ document.addEventListener('DOMContentLoaded', function() {
   ],
   "presets": [
     {
-      "name": "Interactive Product Showcase",
+      "name": "Product Showcase",
       "blocks": [
         {
           "type": "collection"
