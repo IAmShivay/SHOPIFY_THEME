@@ -467,7 +467,7 @@
       }
     },
     "customer_testimonials": {
-      "type": "testimonials",
+      "type": "furniture-testimonials",
       "blocks": {
         "testimonial_sarah": {
           "type": "testimonial",
@@ -600,7 +600,7 @@
       }
     },
     "room_inspiration_gallery": {
-      "type": "gallery-grid",
+      "type": "room-inspiration-gallery",
       "blocks": {
         "living_room_inspiration": {
           "type": "room",
