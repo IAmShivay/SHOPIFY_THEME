@@ -9,51 +9,81 @@
  */
 {
   "sections": {
-    "slideshow_bDT8rN": {
+    "hero_slideshow": {
       "type": "slideshow",
       "blocks": {
-        "slide_9pyT8r": {
+        "slide_living_room": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/contentious-bitcoin-problem-hl1fufi31hq3h038_1.webp",
-            "mobile_image": "shopify://shop_images/WhatsAppImage2023-04-20at2.42.14AM_352b4dde-8f76-4178-910f-cae41f885ebe.jpg",
-            "slide_link": "",
+            "image": "",
+            "mobile_image": "",
+            "slide_link": "shopify://collections/living-room",
             "video_background": false,
-            "content_width": 700,
-            "content_position": "bottom-left",
+            "content_width": 800,
+            "content_position": "middle-left",
             "mobile_content_position": "bottom-center",
-            "content_space": "gap-y-2",
-            "subheading": "",
-            "heading": "Ultimate Nutrition",
-            "heading_tag": "div",
+            "content_space": "gap-y-4",
+            "subheading": "Transform Your Space",
+            "heading": "Beautiful Furniture for Every Home",
+            "heading_tag": "h1",
             "heading_size": "hxl",
-            "content": "build to help you perform unlike any other",
-            "description_size": "medium",
+            "content": "Discover our curated collection of premium furniture designed to make your house feel like home. From modern sofas to classic dining sets.",
+            "description_size": "large",
             "color_text": "#ffffff",
             "overlay_color": "#000000",
-            "overlay_opacity": 20,
-            "overlay_gradient": "",
-            "button_text_1": "",
-            "button_link_1": "",
-            "button_type_1": "underlined",
-            "button_text_2": "Shop all",
-            "button_link_2": "shopify://collections/all-products",
-            "button_type_2": "underlined-white"
+            "overlay_opacity": 40,
+            "overlay_gradient": "linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 100%)",
+            "button_text_1": "Shop Living Room",
+            "button_link_1": "shopify://collections/living-room",
+            "button_type_1": "primary-white",
+            "button_text_2": "View All Furniture",
+            "button_link_2": "shopify://collections/all",
+            "button_type_2": "outline-white"
+          }
+        },
+        "slide_bedroom": {
+          "type": "slide",
+          "settings": {
+            "image": "",
+            "mobile_image": "",
+            "slide_link": "shopify://collections/bedroom",
+            "video_background": false,
+            "content_width": 800,
+            "content_position": "middle-right",
+            "mobile_content_position": "bottom-center",
+            "content_space": "gap-y-4",
+            "subheading": "Sleep in Style",
+            "heading": "Create Your Dream Bedroom",
+            "heading_tag": "h2",
+            "heading_size": "hxl",
+            "content": "From luxurious beds to elegant nightstands, find everything you need to create a peaceful and stylish bedroom retreat.",
+            "description_size": "large",
+            "color_text": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 40,
+            "overlay_gradient": "linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 100%)",
+            "button_text_1": "Shop Bedroom",
+            "button_link_1": "shopify://collections/bedroom",
+            "button_type_1": "primary-white",
+            "button_text_2": "View All",
+            "button_link_2": "shopify://collections/all",
+            "button_type_2": "outline-white"
           }
         }
       },
       "block_order": [
-        "slide_9pyT8r"
+        "slide_living_room",
+        "slide_bedroom"
       ],
       "settings": {
         "slide_width": "w-full",
-        "desktop_height": "desktop-height-full",
-        "mobile_height": "mobile-height-550",
-        "auto_rotate": false,
-        "change_slides_speed": 8,
-        "transition": "zoom",
+        "desktop_height": "desktop-height-750",
+        "mobile_height": "mobile-height-600",
+        "auto_rotate": true,
+        "change_slides_speed": 6,
+        "transition": "slide",
         "controls": "filled-arrows",
-        "accessibility_info": "Slideshow about our brand",
+        "accessibility_info": "Furniture collection slideshow",
         "bg_color": "",
         "controls_color": "#ffffff",
         "controls_color_arrows": "#000000",
@@ -61,34 +91,18 @@
         "padding_bottom": 0
       }
     },
-    "scrolling_text_hgqaYM": {
+    "furniture_benefits_bar": {
       "type": "scrolling-text",
       "blocks": {
-        "text_TmyBEh": {
+        "benefit_delivery": {
           "type": "text",
           "settings": {
-            "text": "Add campaign text here.",
+            "text": "🚚 Free Delivery on Orders Over $999",
             "link": "",
             "outline_text": false
           }
         },
-        "text_q6yhd3": {
-          "type": "text",
-          "settings": {
-            "text": "•",
-            "link": "",
-            "outline_text": false
-          }
-        },
-        "text_qpt9GQ": {
-          "type": "text",
-          "settings": {
-            "text": "Add campaign text here.",
-            "link": "",
-            "outline_text": false
-          }
-        },
-        "text_zmfKrh": {
+        "separator_1": {
           "type": "text",
           "settings": {
             "text": "•",
@@ -96,15 +110,47 @@
             "outline_text": false
           }
         },
-        "text_TxwcUJ": {
+        "benefit_assembly": {
           "type": "text",
           "settings": {
-            "text": "Add campaign text here.",
+            "text": "🔧 Professional Assembly Available",
             "link": "",
             "outline_text": false
           }
         },
-        "text_xKDRri": {
+        "separator_2": {
+          "type": "text",
+          "settings": {
+            "text": "•",
+            "link": "",
+            "outline_text": false
+          }
+        },
+        "benefit_warranty": {
+          "type": "text",
+          "settings": {
+            "text": "🛡️ 5-Year Quality Guarantee",
+            "link": "",
+            "outline_text": false
+          }
+        },
+        "separator_3": {
+          "type": "text",
+          "settings": {
+            "text": "•",
+            "link": "",
+            "outline_text": false
+          }
+        },
+        "benefit_financing": {
+          "type": "text",
+          "settings": {
+            "text": "💳 0% Financing Available",
+            "link": "",
+            "outline_text": false
+          }
+        },
+        "separator_4": {
           "type": "text",
           "settings": {
             "text": "•",
@@ -114,913 +160,608 @@
         }
       },
       "block_order": [
-        "text_TmyBEh",
-        "text_q6yhd3",
-        "text_qpt9GQ",
-        "text_zmfKrh",
-        "text_TxwcUJ",
-        "text_xKDRri"
-      ],
-      "custom_css": [
-        ".responsive-image img {--media-radius: 0px;}"
+        "benefit_delivery",
+        "separator_1",
+        "benefit_assembly",
+        "separator_2",
+        "benefit_warranty",
+        "separator_3",
+        "benefit_financing",
+        "separator_4"
       ],
       "settings": {
         "section_width": "w-full",
-        "text_size": "size-base",
+        "text_size": "size-sm",
         "pause_scroll_on_hover": true,
-        "spacing": 40,
-        "spacing_mobile": 30,
+        "spacing": 50,
+        "spacing_mobile": 40,
         "image_width": 32,
-        "speed": 15,
+        "speed": 20,
         "direction": "left",
-        "bg_color": "",
-        "text_color": "",
-        "padding_top": 28,
-        "padding_bottom": 20
+        "bg_color": "#f8f9fa",
+        "text_color": "#2c3e50",
+        "padding_top": 16,
+        "padding_bottom": 16
       }
     },
-    "collection_list_Xi8cjB": {
+    "furniture_categories": {
       "type": "collection-list",
       "blocks": {
-        "featured_collection_bhW4NC": {
+        "living_room_collection": {
           "type": "featured_collection",
           "settings": {
-            "collection": "amino-acids",
+            "collection": "living-room",
             "image": "{{ block.settings.collection.image }}",
-            "title": "",
-            "url": ""
+            "title": "Living Room",
+            "url": "shopify://collections/living-room"
           }
         },
-        "featured_collection_8LgwgG": {
+        "bedroom_collection": {
           "type": "featured_collection",
           "settings": {
-            "collection": "effervescent-tabs",
+            "collection": "bedroom",
             "image": "{{ block.settings.collection.image }}",
-            "title": "",
-            "url": ""
+            "title": "Bedroom",
+            "url": "shopify://collections/bedroom"
           }
         },
-        "featured_collection_FbBAGf": {
+        "dining_room_collection": {
           "type": "featured_collection",
           "settings": {
-            "collection": "",
-            "title": "",
-            "url": ""
+            "collection": "dining-room",
+            "image": "{{ block.settings.collection.image }}",
+            "title": "Dining Room",
+            "url": "shopify://collections/dining-room"
           }
         },
-        "featured_collection_iLW78E": {
+        "office_collection": {
           "type": "featured_collection",
           "settings": {
-            "collection": "",
-            "title": "",
-            "url": ""
+            "collection": "office",
+            "image": "{{ block.settings.collection.image }}",
+            "title": "Home Office",
+            "url": "shopify://collections/office"
           }
         },
-        "featured_collection_9BmLNW": {
+        "outdoor_collection": {
           "type": "featured_collection",
           "settings": {
-            "collection": "",
-            "title": "",
-            "url": ""
+            "collection": "outdoor",
+            "image": "{{ block.settings.collection.image }}",
+            "title": "Outdoor",
+            "url": "shopify://collections/outdoor"
           }
         },
-        "featured_collection_fYN4Kj": {
+        "storage_collection": {
           "type": "featured_collection",
           "settings": {
-            "collection": "",
-            "title": "",
-            "url": ""
-          }
-        },
-        "featured_collection_Tjh4RF": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "",
-            "title": "",
-            "url": ""
+            "collection": "storage",
+            "image": "{{ block.settings.collection.image }}",
+            "title": "Storage",
+            "url": "shopify://collections/storage"
           }
         }
       },
       "block_order": [
-        "featured_collection_bhW4NC",
-        "featured_collection_8LgwgG",
-        "featured_collection_FbBAGf",
-        "featured_collection_iLW78E",
-        "featured_collection_9BmLNW",
-        "featured_collection_fYN4Kj",
-        "featured_collection_Tjh4RF"
+        "living_room_collection",
+        "bedroom_collection",
+        "dining_room_collection",
+        "office_collection",
+        "outdoor_collection",
+        "storage_collection"
       ],
       "settings": {
         "section_width": "container",
-        "subheading": "",
-        "heading": "Collection list",
+        "subheading": "Shop by Room",
+        "heading": "Find Furniture for Every Space",
         "heading_tag": "h2",
         "heading_size_section": "h2",
-        "description": "<p>Describe your collection here</p>",
-        "layout": "horizontal",
-        "link_url": "",
-        "link_text": "Shop all",
-        "button_type": "underlined",
-        "show_icon": false,
-        "card_type": "standard",
-        "image_ratio": "square",
-        "show_collection_count": true,
+        "description": "<p>Discover our carefully curated collections designed to transform every room in your home into a beautiful, functional space.</p>",
+        "layout": "vertical",
+        "link_url": "shopify://collections/all",
+        "link_text": "View All Furniture",
+        "button_type": "primary",
+        "show_icon": true,
+        "card_type": "overlay",
+        "image_ratio": "landscape",
+        "show_collection_count": false,
         "show_button_arrow": true,
         "show_zoom_on_hover": true,
-        "heading_size": "h5",
-        "content_alignment": "start",
-        "title_color": "rgba(0,0,0,0)",
-        "overlay_color": "rgba(0,0,0,0)",
+        "heading_size": "h4",
+        "content_alignment": "center",
+        "title_color": "#ffffff",
+        "overlay_color": "#000000",
         "enable_gradient": true,
-        "overlay_opacity": 50,
-        "enable_stack_collections": false,
-        "show_progress_bar": true,
+        "overlay_opacity": 30,
+        "enable_stack_collections": true,
+        "show_progress_bar": false,
         "enable_overflow_visible": false,
-        "columns_desktop": 5,
-        "column_gap": 3,
+        "columns_desktop": 3,
+        "column_gap": 2,
         "columns_mobile": "2",
-        "column_gap_mobile": 2,
+        "column_gap_mobile": 1.5,
         "swipe_on_mobile": true,
-        "bg_color": "rgba(0,0,0,0)",
-        "text_color": "rgba(0,0,0,0)",
-        "padding_top": 60,
-        "padding_bottom": 80
+        "bg_color": "#ffffff",
+        "text_color": "#2c3e50",
+        "padding_top": 80,
+        "padding_bottom": 60
       }
     },
-    "rich_text_LqTtq3": {
+    "brand_story": {
       "type": "rich-text",
       "blocks": {
-        "heading_QC8inb": {
+        "heading_brand": {
           "type": "heading",
           "settings": {
-            "heading": "Nutrabox",
+            "heading": "Crafting Beautiful Homes Since 1985",
             "heading_tag": "h2",
-            "heading_size": "h1"
+            "heading_size": "h2"
           }
         },
-        "separator_Mhbyfn": {
+        "separator_brand": {
           "type": "separator",
           "settings": {
             "show_border": false,
-            "space": 8
+            "space": 16
           }
         },
-        "subheading_RMikCH": {
+        "subheading_brand": {
           "type": "subheading",
           "settings": {
-            "subheading": "Makers of India's 1st Complete Certified Protein"
+            "subheading": "Quality Furniture, Exceptional Service, Lasting Memories"
           }
         },
-        "button_candr4": {
+        "separator_brand_2": {
+          "type": "separator",
+          "settings": {
+            "show_border": false,
+            "space": 12
+          }
+        },
+        "text_brand": {
+          "type": "text",
+          "settings": {
+            "text": "<p>For nearly four decades, we've been helping families create beautiful, comfortable homes with our carefully selected furniture collections. From timeless classics to contemporary designs, every piece is chosen for its quality, durability, and style.</p>",
+            "large_text": true
+          }
+        },
+        "button_about": {
           "type": "button",
           "settings": {
-            "button_label": "Shop Now",
-            "button_link": "",
+            "button_label": "Our Story",
+            "button_link": "shopify://pages/about-us",
             "button_type": "underlined",
             "show_icon": true
           }
         }
       },
       "block_order": [
-        "heading_QC8inb",
-        "separator_Mhbyfn",
-        "subheading_RMikCH",
-        "button_candr4"
+        "heading_brand",
+        "separator_brand",
+        "subheading_brand",
+        "separator_brand_2",
+        "text_brand",
+        "button_about"
       ],
       "settings": {
         "section_width": "container-fluid",
-        "content_width": "container",
+        "content_width": "max-w-4xl",
         "content_alignment": "center",
-        "bg_color": "#f4f4f8",
-        "text_color": "",
-        "padding_top": 80,
-        "padding_bottom": 80
-      }
-    },
-    "image_with_text_naCdkM": {
-      "type": "image-with-text",
-      "blocks": {
-        "circular_text_U8RawC": {
-          "type": "circular_text",
-          "settings": {
-            "text": "Circular text promotion •",
-            "size": 70,
-            "font_size": 4,
-            "show_icon": true,
-            "show_animation": true
-          }
-        },
-        "heading_VkW43g": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image with text",
-            "heading_tag": "h2",
-            "heading_size": "h2"
-          }
-        },
-        "text_MNAJCH": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
-            "large_text": false
-          }
-        },
-        "separator_bexHzB": {
-          "type": "separator",
-          "settings": {
-            "show_border": false,
-            "space": 8
-          }
-        },
-        "button_t4TWdt": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button text",
-            "button_link": "",
-            "button_type": "primary",
-            "show_icon": false
-          }
-        }
-      },
-      "block_order": [
-        "circular_text_U8RawC",
-        "heading_VkW43g",
-        "text_MNAJCH",
-        "separator_bexHzB",
-        "button_t4TWdt"
-      ],
-      "settings": {
-        "section_width": "container-fluid",
-        "media_size": "landscape",
-        "show_image_2": false,
-        "position_image_2": "middle-right",
-        "media_size_2": "adapt",
-        "desktop_image_width": "50",
-        "use_video": false,
-        "video": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "video_autoplay": true,
-        "video_controls": true,
-        "layout": "left",
-        "column_gap": "4",
-        "vertical_alignment": "center",
-        "content_alignment": "start",
-        "bg_color": "rgba(0,0,0,0)",
-        "text_color": "",
-        "bg_column": "#d3dd48",
-        "padding_top": 8,
-        "padding_bottom": 0
-      }
-    },
-    "collection_tabs_wThRhf": {
-      "type": "collection-tabs",
-      "blocks": {
-        "collection_FhMg7W": {
-          "type": "collection",
-          "settings": {
-            "collection": "newly-launched",
-            "tab_heading": ""
-          }
-        },
-        "collection_bEYwhA": {
-          "type": "collection",
-          "settings": {
-            "collection": "homepage-best-seller",
-            "tab_heading": "Best Sellers"
-          }
-        }
-      },
-      "block_order": [
-        "collection_FhMg7W",
-        "collection_bEYwhA"
-      ],
-      "settings": {
-        "section_width": "container",
-        "subheading": "",
-        "heading": "Shop with confidence",
-        "heading_tag": "h2",
-        "heading_size_section": "h2",
-        "description": "<p>Extensively tested products to improve your fitness journey</p>",
-        "enable_uppercase": false,
-        "tabs_font_family": "body_font",
-        "layout": "horizontal",
-        "enable_stack_products": false,
-        "show_progress_bar": true,
-        "enable_overflow_visible": false,
-        "products_to_show": 6,
-        "columns_desktop": 4,
-        "column_gap": 3,
-        "columns_mobile": "2",
-        "column_gap_mobile": 2,
-        "swipe_on_mobile": true,
-        "bg_color": "",
-        "text_color": "",
-        "padding_top": 64,
-        "padding_bottom": 64
-      }
-    },
-    "testimonials_agXwmk": {
-      "type": "testimonials",
-      "blocks": {
-        "quote_RApQ8c": {
-          "type": "quote",
-          "settings": {
-            "product": "",
-            "rating": 4.5,
-            "text": "Add your customer or client quote here to showcase them.",
-            "media_size": "adapt",
-            "name": "Testimonial author",
-            "position": "― Position"
-          }
-        },
-        "quote_beKkw7": {
-          "type": "quote",
-          "settings": {
-            "product": "",
-            "rating": 3.5,
-            "text": "Add your customer or client quote here to showcase them.",
-            "media_size": "adapt",
-            "name": "Testimonial author",
-            "position": "― Position"
-          }
-        },
-        "quote_AzEDLf": {
-          "type": "quote",
-          "settings": {
-            "product": "",
-            "rating": 5,
-            "text": "Add your customer or client quote here to showcase them.",
-            "media_size": "adapt",
-            "name": "Testimonial author",
-            "position": "― Position"
-          }
-        }
-      },
-      "block_order": [
-        "quote_RApQ8c",
-        "quote_beKkw7",
-        "quote_AzEDLf"
-      ],
-      "settings": {
-        "section_width": "w-full",
-        "subheading": "",
-        "heading": "Testimonial",
-        "heading_tag": "h2",
-        "heading_size_section": "h2",
-        "description": "<p>Add a short description for this section</p>",
-        "layout": "vertical",
-        "testimonial_type": "focused",
-        "content_alignment": "center",
-        "vertical_alignment": "center",
-        "content_size": "h4",
-        "show_rating": true,
-        "show_arrows": true,
-        "auto_rotate": true,
-        "change_slides_speed": 5,
-        "bg_color": "#f3ead7",
-        "text_color": "#000000",
+        "bg_color": "#f8f9fa",
+        "text_color": "#2c3e50",
         "padding_top": 100,
         "padding_bottom": 100
       }
     },
-    "countdown_bar_YwkjG4": {
-      "type": "countdown-bar",
-      "settings": {
-        "section_width": "container",
-        "end_time": "2025/12/31 23:59:59",
-        "style": "outline",
-        "font_family": "heading",
-        "number_size": "h4",
-        "text_type": "long",
-        "subheading": "",
-        "heading": "Countdown bar",
-        "heading_size": "h3",
-        "text": "<p>Month is full of possibilities, waiting to be explored.</p>",
-        "button_label": "Button text",
-        "button_link": "",
-        "button_type": "primary-white",
-        "show_icon": false,
-        "bg_color": "#fb7937",
-        "text_color": "#ffffff",
-        "border_color": "rgba(0,0,0,0)",
-        "overlay_color": "#000000",
-        "overlay_opacity": 0,
-        "overlay_gradient": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "featured_product_7yD8dN": {
-      "type": "featured-product",
+    "design_services": {
+      "type": "image-with-text",
       "blocks": {
-        "text_zRMKMD": {
-          "type": "text",
+        "circular_text_design": {
+          "type": "circular_text",
           "settings": {
-            "text": "",
-            "text_style": "subheading"
+            "text": "Free Design Consultation •",
+            "size": 80,
+            "font_size": 3.5,
+            "show_icon": true,
+            "show_animation": true
           }
         },
-        "title_Di3fcW": {
-          "type": "title",
+        "heading_design": {
+          "type": "heading",
           "settings": {
+            "heading": "Professional Interior Design Services",
+            "heading_tag": "h2",
             "heading_size": "h2"
           }
         },
-        "rating_QwTdfN": {
-          "type": "rating",
-          "settings": {}
-        },
-        "rich_text_x3ELcT": {
-          "type": "rich-text",
+        "text_design": {
+          "type": "text",
           "settings": {
-            "align": "start",
-            "icon": "none",
-            "width": 20,
-            "heading": "",
-            "content": "<p>🔥 Promotion here</p>",
-            "background": "#fdeee5",
-            "color": "#8e3300"
+            "text": "<p>Transform your space with our complimentary interior design consultation. Our experienced designers will help you create a cohesive look that reflects your personal style while maximizing functionality and comfort.</p>",
+            "large_text": false
           }
         },
-        "price_h7jXmX": {
-          "type": "price",
-          "settings": {
-            "show_sale_badge": true,
-            "sale_badge_type": "percentage"
-          }
-        },
-        "sku_EMAzbJ": {
-          "type": "sku",
-          "settings": {
-            "text_style": "uppercase"
-          }
-        },
-        "variant_picker_VQfdjp": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button",
-            "hide_sold_out_variants": false,
-            "color_picker_type": "native_color_swatch",
-            "style": "solid",
-            "option_name": "Size",
-            "size_chart_page": ""
-          }
-        },
-        "quantity_selector_gWfLfp": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
-        "buy_buttons_JjnmfE": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_two_columns": false,
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true,
-            "show_pickup_availability": true,
-            "show_back_in_stock": false,
-            "text_back_in_stock": "Notify me"
-          }
-        },
-        "collapsible_tab_K84XhX": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Collapsible row",
-            "heading_size": "h6",
-            "icon": "none",
-            "content": "",
-            "content_liquid": "{%- assign product = section.settings.product -%}\n{{ product.description }}",
-            "page": "",
-            "open_by_default": false
-          }
-        },
-        "collapsible_tab_ibj9Kf": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Collapsible row",
-            "heading_size": "h6",
-            "icon": "none",
-            "content": "",
-            "content_liquid": "",
-            "page": "",
-            "open_by_default": false
-          }
-        },
-        "icon_with_text_xDiqWV": {
-          "type": "icon-with-text",
-          "settings": {
-            "layout": "vertical",
-            "icon_size": 20,
-            "icon_1": "lock",
-            "heading_1": "Icon with text",
-            "icon_2": "truck",
-            "heading_2": "Icon with text",
-            "icon_3": "box",
-            "heading_3": "Icon with text",
-            "icon_4": "none",
-            "heading_4": ""
-          }
-        },
-        "share_iGrYVk": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        },
-        "separator_LGdwbk": {
+        "separator_design": {
           "type": "separator",
           "settings": {
             "show_border": false,
-            "divider_space": 2
+            "space": 16
+          }
+        },
+        "button_consultation": {
+          "type": "button",
+          "settings": {
+            "button_label": "Book Free Consultation",
+            "button_link": "shopify://pages/design-services",
+            "button_type": "primary",
+            "show_icon": true
           }
         }
       },
       "block_order": [
-        "text_zRMKMD",
-        "title_Di3fcW",
-        "rating_QwTdfN",
-        "rich_text_x3ELcT",
-        "price_h7jXmX",
-        "sku_EMAzbJ",
-        "variant_picker_VQfdjp",
-        "quantity_selector_gWfLfp",
-        "buy_buttons_JjnmfE",
-        "collapsible_tab_K84XhX",
-        "collapsible_tab_ibj9Kf",
-        "icon_with_text_xDiqWV",
-        "share_iGrYVk",
-        "separator_LGdwbk"
+        "circular_text_design",
+        "heading_design",
+        "text_design",
+        "separator_design",
+        "button_consultation"
       ],
       "settings": {
         "section_width": "container",
-        "product": "flavoured-whey-protein-with-dha-mct",
-        "enable_sticky_info": true,
-        "media_width": 55,
-        "media_aspect_ratio": "adapt",
-        "thumbnail_aspect_ratio": "square",
-        "gallery_layout": "thumbnail_left",
-        "media_position": "left",
-        "show_lightbox": false,
-        "enable_video_autoplay": true,
-        "enable_video_looping": false,
-        "mobile_thumbnails": "show",
-        "enable_media_grouping": false,
-        "grouping_type": "variant_group",
-        "bg_color": "",
-        "text_color": "",
-        "border_color": "",
+        "media_size": "landscape",
+        "show_image_2": false,
+        "position_image_2": "middle-right",
+        "media_size_2": "adapt",
+        "desktop_image_width": "55",
+        "use_video": false,
+        "video": "",
+        "video_autoplay": false,
+        "video_controls": true,
+        "layout": "right",
+        "column_gap": "6",
+        "vertical_alignment": "center",
+        "content_alignment": "start",
+        "bg_color": "#ffffff",
+        "text_color": "#2c3e50",
+        "bg_column": "#f8f9fa",
         "padding_top": 80,
         "padding_bottom": 80
       }
     },
-    "image_with_text_overlay_CAema3": {
-      "type": "image-with-text-overlay",
+    "featured_products_tabs": {
+      "type": "collection-tabs",
       "blocks": {
-        "subheading_twkx6i": {
-          "type": "subheading",
+        "new_arrivals": {
+          "type": "collection",
           "settings": {
-            "subheading": "Sub heading"
+            "collection": "new-arrivals",
+            "tab_heading": "New Arrivals"
           }
         },
-        "heading_TmrAqz": {
-          "type": "heading",
+        "best_sellers": {
+          "type": "collection",
           "settings": {
-            "heading": "Image Text Overlay",
-            "heading_tag": "h2",
-            "heading_size": "h1"
+            "collection": "best-sellers",
+            "tab_heading": "Best Sellers"
           }
         },
-        "text_zbjftN": {
-          "type": "text",
+        "sale_items": {
+          "type": "collection",
           "settings": {
-            "text": "<p>Give customers details about the banner image(s) or content on the template.</p>",
-            "large_text": false
-          }
-        },
-        "separator_PitpAk": {
-          "type": "separator",
-          "settings": {
-            "show_border": false,
-            "space": 8
-          }
-        },
-        "buttons_cyFbjg": {
-          "type": "buttons",
-          "settings": {
-            "button_label": "Button text",
-            "button_link": "",
-            "button_type": "primary",
-            "show_icon": false
+            "collection": "sale",
+            "tab_heading": "Sale"
           }
         }
       },
       "block_order": [
-        "subheading_twkx6i",
-        "heading_TmrAqz",
-        "text_zbjftN",
-        "separator_PitpAk",
-        "buttons_cyFbjg"
+        "new_arrivals",
+        "best_sellers",
+        "sale_items"
       ],
       "settings": {
-        "section_width": "container-fluid",
-        "link": "",
-        "desktop_height": "desktop-height-650",
-        "mobile_height": "mobile-height-500",
-        "desktop_content_position": "middle-left",
-        "mobile_content_position": "middle-center",
-        "content_alignment": "center",
-        "mobile_content_alignment": "center",
-        "content_width": "max-w-3xl",
-        "enable_parallax": false,
-        "color_text": "#000000",
-        "overlay_color": "#000000",
-        "overlay_opacity": 0,
-        "overlay_gradient": ""
+        "section_width": "container",
+        "subheading": "Discover Our Collections",
+        "heading": "Featured Furniture",
+        "heading_tag": "h2",
+        "heading_size_section": "h2",
+        "description": "<p>Explore our most popular pieces, latest arrivals, and special offers. Each item is carefully selected for quality, style, and value.</p>",
+        "enable_uppercase": false,
+        "tabs_font_family": "heading_font",
+        "layout": "vertical",
+        "enable_stack_products": true,
+        "show_progress_bar": false,
+        "enable_overflow_visible": false,
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "column_gap": 2.5,
+        "columns_mobile": "2",
+        "column_gap_mobile": 1.5,
+        "swipe_on_mobile": true,
+        "bg_color": "#ffffff",
+        "text_color": "#2c3e50",
+        "padding_top": 80,
+        "padding_bottom": 80
       }
     },
-    "gallery_grid_YyV6r3": {
+    "customer_testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "quote_sarah": {
+          "type": "quote",
+          "settings": {
+            "product": "",
+            "rating": 5,
+            "text": "The quality of furniture exceeded our expectations! The delivery team was professional and the assembly service made everything so easy. Our living room has never looked better.",
+            "media_size": "square",
+            "name": "Sarah Johnson",
+            "position": "― Verified Customer"
+          }
+        },
+        "quote_michael": {
+          "type": "quote",
+          "settings": {
+            "product": "",
+            "rating": 5,
+            "text": "Outstanding customer service and beautiful furniture. The design consultation helped us create the perfect home office. Highly recommend!",
+            "media_size": "square",
+            "name": "Michael Chen",
+            "position": "― Verified Customer"
+          }
+        },
+        "quote_emma": {
+          "type": "quote",
+          "settings": {
+            "product": "",
+            "rating": 4.5,
+            "text": "Love our new dining set! The craftsmanship is excellent and it fits perfectly in our space. The whole experience from selection to delivery was seamless.",
+            "media_size": "square",
+            "name": "Emma Rodriguez",
+            "position": "― Verified Customer"
+          }
+        }
+      },
+      "block_order": [
+        "quote_sarah",
+        "quote_michael",
+        "quote_emma"
+      ],
+      "settings": {
+        "section_width": "container",
+        "subheading": "What Our Customers Say",
+        "heading": "Real Reviews from Real Customers",
+        "heading_tag": "h2",
+        "heading_size_section": "h2",
+        "description": "<p>Don't just take our word for it. See what our satisfied customers have to say about their furniture and shopping experience.</p>",
+        "layout": "horizontal",
+        "testimonial_type": "standard",
+        "content_alignment": "center",
+        "vertical_alignment": "center",
+        "content_size": "h5",
+        "show_rating": true,
+        "show_arrows": false,
+        "auto_rotate": false,
+        "change_slides_speed": 6,
+        "bg_color": "#f8f9fa",
+        "text_color": "#2c3e50",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "furniture_services": {
+      "type": "text-with-icons",
+      "blocks": {
+        "service_delivery": {
+          "type": "feature",
+          "settings": {
+            "icon": "truck",
+            "heading": "Free White Glove Delivery",
+            "text": "<p>Complimentary delivery and setup for orders over $999. Our professional team will place your furniture exactly where you want it.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "service_assembly": {
+          "type": "feature",
+          "settings": {
+            "icon": "box",
+            "heading": "Professional Assembly",
+            "text": "<p>Expert assembly service available for all furniture. Our trained technicians ensure your pieces are assembled safely and correctly.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "service_warranty": {
+          "type": "feature",
+          "settings": {
+            "icon": "lock",
+            "heading": "5-Year Quality Guarantee",
+            "text": "<p>We stand behind our furniture with a comprehensive 5-year warranty covering manufacturing defects and structural issues.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "service_financing": {
+          "type": "feature",
+          "settings": {
+            "icon": "note",
+            "heading": "Flexible Financing Options",
+            "text": "<p>0% APR financing available for qualified customers. Make your dream furniture affordable with our flexible payment plans.</p>",
+            "link_label": "Learn More",
+            "link": "shopify://pages/financing"
+          }
+        }
+      },
+      "block_order": [
+        "service_delivery",
+        "service_assembly",
+        "service_warranty",
+        "service_financing"
+      ],
+      "settings": {
+        "section_width": "container",
+        "subheading": "Why Choose Us",
+        "heading": "Exceptional Service Every Step of the Way",
+        "heading_tag": "h2",
+        "heading_size_section": "h2",
+        "description": "<p>From selection to delivery, we're committed to making your furniture shopping experience exceptional.</p>",
+        "layout": "vertical",
+        "icon_size": 48,
+        "content_alignment": "center",
+        "columns_desktop": 4,
+        "columns_mobile": "1",
+        "bg_color": "#ffffff",
+        "text_color": "#2c3e50",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "room_inspiration_gallery": {
       "type": "gallery-grid",
       "blocks": {
-        "image_TtR78E": {
+        "living_room_inspiration": {
+          "type": "image",
+          "settings": {
+            "use_video": false,
+            "media_size": "landscape",
+            "subheading": "Living Room",
+            "heading": "Modern Comfort Meets Style",
+            "heading_size": "h3",
+            "text": "<p>Create a welcoming space for family and friends with our contemporary living room collection.</p>",
+            "button_label": "Shop Living Room",
+            "button_link": "shopify://collections/living-room",
+            "button_type": "primary-white",
+            "show_icon": true,
+            "desktop_content_position": "bottom-left",
+            "block_width": "basis-1/2",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 20,
+            "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%)"
+          }
+        },
+        "bedroom_inspiration": {
+          "type": "image",
+          "settings": {
+            "use_video": false,
+            "media_size": "landscape",
+            "subheading": "Bedroom",
+            "heading": "Your Personal Sanctuary",
+            "heading_size": "h3",
+            "text": "<p>Transform your bedroom into a peaceful retreat with our elegant furniture collections.</p>",
+            "button_label": "Shop Bedroom",
+            "button_link": "shopify://collections/bedroom",
+            "button_type": "primary-white",
+            "show_icon": true,
+            "desktop_content_position": "bottom-right",
+            "block_width": "basis-1/2",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 20,
+            "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%)"
+          }
+        },
+        "dining_room_inspiration": {
           "type": "image",
           "settings": {
             "use_video": false,
             "media_size": "square",
-            "subheading": "Sub heading",
-            "heading": "Promote your products",
-            "heading_size": "h2",
-            "text": "<p>Pair text with an image to focus on your chosen image</p>",
-            "button_label": "Shop now",
-            "button_link": "",
+            "subheading": "Dining Room",
+            "heading": "Gather & Celebrate",
+            "heading_size": "h3",
+            "text": "<p>Make every meal special with our beautiful dining room furniture.</p>",
+            "button_label": "Shop Dining",
+            "button_link": "shopify://collections/dining-room",
             "button_type": "primary-white",
-            "show_icon": false,
-            "desktop_content_position": "bottom-left",
+            "show_icon": true,
+            "desktop_content_position": "bottom-center",
             "block_width": "basis-1/3",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "overlay_gradient": "linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(30, 30, 30, 0.7) 100%)"
+            "overlay_opacity": 25,
+            "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.8) 100%)"
           }
         },
-        "image_rEezPB": {
-          "type": "image",
-          "settings": {
-            "use_video": true,
-            "media_size": "square",
-            "subheading": "Sub heading",
-            "heading": "Promote your products",
-            "heading_size": "h2",
-            "text": "<p>Pair text with an image to focus on your chosen image</p>",
-            "button_label": "Shop now",
-            "button_link": "",
-            "button_type": "primary-white",
-            "show_icon": false,
-            "desktop_content_position": "bottom-left",
-            "block_width": "basis-1/3",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "overlay_gradient": "linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(30, 30, 30, 0.7) 100%)"
-          }
-        },
-        "image_W4Ue3r": {
+        "office_inspiration": {
           "type": "image",
           "settings": {
             "use_video": false,
             "media_size": "square",
-            "subheading": "Sub heading",
-            "heading": "Promote your products",
-            "heading_size": "h2",
-            "text": "<p>Pair text with an image to focus on your chosen image</p>",
-            "button_label": "Shop now",
-            "button_link": "",
+            "subheading": "Home Office",
+            "heading": "Work in Style",
+            "heading_size": "h3",
+            "text": "<p>Create a productive workspace with our ergonomic office furniture.</p>",
+            "button_label": "Shop Office",
+            "button_link": "shopify://collections/office",
             "button_type": "primary-white",
-            "show_icon": false,
-            "desktop_content_position": "bottom-left",
+            "show_icon": true,
+            "desktop_content_position": "bottom-center",
             "block_width": "basis-1/3",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
-            "overlay_opacity": 0,
-            "overlay_gradient": "linear-gradient(180deg, rgba(255, 255, 255, 0) 18%, rgba(30, 30, 30, 0.7) 100%)"
+            "overlay_opacity": 25,
+            "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.8) 100%)"
+          }
+        },
+        "outdoor_inspiration": {
+          "type": "image",
+          "settings": {
+            "use_video": false,
+            "media_size": "square",
+            "subheading": "Outdoor",
+            "heading": "Extend Your Living Space",
+            "heading_size": "h3",
+            "text": "<p>Enjoy the outdoors in comfort with our weather-resistant patio furniture.</p>",
+            "button_label": "Shop Outdoor",
+            "button_link": "shopify://collections/outdoor",
+            "button_type": "primary-white",
+            "show_icon": true,
+            "desktop_content_position": "bottom-center",
+            "block_width": "basis-1/3",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 25,
+            "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.8) 100%)"
           }
         }
       },
       "block_order": [
-        "image_TtR78E",
-        "image_rEezPB",
-        "image_W4Ue3r"
+        "living_room_inspiration",
+        "bedroom_inspiration",
+        "dining_room_inspiration",
+        "office_inspiration",
+        "outdoor_inspiration"
       ],
       "settings": {
         "section_width": "container-fluid",
-        "subheading": "",
-        "heading": "",
+        "subheading": "Room Inspiration",
+        "heading": "Discover Your Style",
         "heading_tag": "h2",
         "heading_size_section": "h2",
-        "description": "",
+        "description": "<p>Get inspired by our beautifully furnished rooms and discover how our furniture can transform your space.</p>",
         "layout": "vertical",
-        "column_gap": "8",
-        "bg_color": "",
-        "text_color": "",
-        "padding_top": 8,
-        "padding_bottom": 0
-      }
-    },
-    "rich_text_8T33VV": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_iUERD7": {
-          "type": "heading",
-          "settings": {
-            "heading": "Talk about your brand",
-            "heading_tag": "h2",
-            "heading_size": "h2"
-          }
-        },
-        "text_6TwhPe": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>",
-            "large_text": false
-          }
-        },
-        "separator_AzBhTc": {
-          "type": "separator",
-          "settings": {
-            "show_border": false,
-            "space": 4
-          }
-        },
-        "button_VE99i4": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button text",
-            "button_link": "",
-            "button_type": "underlined",
-            "show_icon": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_iUERD7",
-        "text_6TwhPe",
-        "separator_AzBhTc",
-        "button_VE99i4"
-      ],
-      "settings": {
-        "section_width": "container-fluid",
-        "content_width": "max-w-7xl",
-        "content_alignment": "center",
-        "bg_color": "rgba(0,0,0,0)",
-        "text_color": "",
-        "padding_top": 80,
-        "padding_bottom": 0
-      }
-    },
-    "logo_list_wm3qTE": {
-      "type": "logo-list",
-      "blocks": {
-        "logo_Ydkzkb": {
-          "type": "logo",
-          "settings": {
-            "url": "",
-            "image_width": 130
-          }
-        },
-        "logo_Cr4bCN": {
-          "type": "logo",
-          "settings": {
-            "url": "",
-            "image_width": 130
-          }
-        },
-        "logo_hzBnXN": {
-          "type": "logo",
-          "disabled": true,
-          "settings": {
-            "url": "",
-            "image_width": 130
-          }
-        },
-        "logo_hAejt8": {
-          "type": "logo",
-          "settings": {
-            "url": "",
-            "image_width": 130
-          }
-        },
-        "logo_pDxwwM": {
-          "type": "logo",
-          "settings": {
-            "url": "",
-            "image_width": 130
-          }
-        },
-        "logo_dfNbhf": {
-          "type": "logo",
-          "settings": {
-            "url": "",
-            "image_width": 130
-          }
-        }
-      },
-      "block_order": [
-        "logo_Ydkzkb",
-        "logo_Cr4bCN",
-        "logo_hzBnXN",
-        "logo_hAejt8",
-        "logo_pDxwwM",
-        "logo_dfNbhf"
-      ],
-      "settings": {
-        "section_width": "container",
-        "subheading": "Logo list",
-        "heading": "",
-        "heading_tag": "h2",
-        "heading_size_section": "h2",
-        "description": "",
-        "layout": "vertical",
-        "enable_stack_columns": true,
-        "show_progress_bar": false,
-        "columns_desktop": 5,
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "bg_color": "#f4f4f8",
-        "text_color": "#a54547",
+        "column_gap": "2",
+        "bg_color": "#ffffff",
+        "text_color": "#2c3e50",
         "padding_top": 80,
         "padding_bottom": 80
-      }
-    },
-    "rich_text_kxYe7g": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_7bfyax": {
-          "type": "heading",
-          "settings": {
-            "heading": "Talk about your brand",
-            "heading_tag": "h2",
-            "heading_size": "h4"
-          }
-        },
-        "separator_tDVHVH": {
-          "type": "separator",
-          "settings": {
-            "show_border": false,
-            "space": 1
-          }
-        },
-        "button_8QyXGe": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button text",
-            "button_link": "",
-            "button_type": "underlined",
-            "show_icon": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_7bfyax",
-        "separator_tDVHVH",
-        "button_8QyXGe"
-      ],
-      "settings": {
-        "section_width": "w-full",
-        "content_width": "max-w-4xl",
-        "content_alignment": "center",
-        "bg_color": "",
-        "text_color": "",
-        "padding_top": 32,
-        "padding_bottom": 80
-      }
-    },
-    "divider_XrN4rF": {
-      "type": "divider",
-      "settings": {
-        "section_width": "container",
-        "spacer_mobile": 2,
-        "spacer_desktop": 2,
-        "show_border": true,
-        "bg_color": "",
-        "color": "",
-        "style": "solid",
-        "thickness": 1
       }
     },
     "featured_blog_8FGqH4": {
       "type": "featured-blog",
       "settings": {
         "section_width": "container",
-        "subheading": "",
-        "heading": "From the Journal",
+        "subheading": "Design Tips & Inspiration",
+        "heading": "Latest from Our Design Blog",
         "heading_tag": "h2",
         "heading_size_section": "h2",
-        "description": "<p>Latest news from your blog.</p>",
+        "description": "<p>Get expert tips on interior design, furniture care, and home styling from our design professionals.</p>",
         "layout": "vertical",
-        "blog": "news",
+        "blog": "design-blog",
         "image_ratio": "landscape",
         "show_image": true,
         "show_date": true,
-        "show_author": true,
-        "show_excerpt": false,
-        "show_category": true,
+        "show_author": false,
+        "show_excerpt": true,
+        "show_category": false,
         "show_read_more": true,
         "enable_button_underlined_white": false,
         "enable_stack_columns": true,
@@ -1029,130 +770,29 @@
         "post_limit": 3,
         "columns_desktop": 3,
         "column_gap": 3,
-        "column_gap_mobile": 3,
-        "swipe_on_mobile": false,
-        "link_url": "",
-        "link_text": "",
-        "button_type": "underlined",
-        "show_icon": false,
-        "bg_color": "",
-        "text_color": "",
-        "padding_top": 68,
-        "padding_bottom": 80
-      }
-    },
-    "divider_wiE6Jr": {
-      "type": "divider",
-      "settings": {
-        "section_width": "container",
-        "spacer_mobile": 2,
-        "spacer_desktop": 2,
-        "show_border": true,
-        "bg_color": "",
-        "color": "",
-        "style": "solid",
-        "thickness": 1
-      }
-    },
-    "gallery_socical_QRe8hD": {
-      "type": "gallery-socical",
-      "blocks": {
-        "gallery_JzXt3e": {
-          "type": "gallery",
-          "settings": {
-            "text": "",
-            "link": ""
-          }
-        },
-        "gallery_h9Giqc": {
-          "type": "gallery",
-          "settings": {
-            "text": "",
-            "link": ""
-          }
-        },
-        "gallery_q8p6mK": {
-          "type": "gallery",
-          "settings": {
-            "text": "",
-            "link": ""
-          }
-        },
-        "gallery_HtBGeQ": {
-          "type": "gallery",
-          "settings": {
-            "text": "",
-            "link": ""
-          }
-        },
-        "gallery_BKmF4a": {
-          "type": "gallery",
-          "settings": {
-            "text": "",
-            "link": ""
-          }
-        },
-        "gallery_TwgjaX": {
-          "type": "gallery",
-          "settings": {
-            "text": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "gallery_JzXt3e",
-        "gallery_h9Giqc",
-        "gallery_q8p6mK",
-        "gallery_HtBGeQ",
-        "gallery_BKmF4a",
-        "gallery_TwgjaX"
-      ],
-      "settings": {
-        "section_width": "container-fluid",
-        "subheading": "sub heading",
-        "heading": "Gallery social",
-        "heading_tag": "h2",
-        "heading_size_section": "h2",
-        "description": "",
-        "layout": "vertical",
-        "link_url": "",
-        "link_text": "",
-        "button_type": "primary",
-        "show_icon": false,
-        "layout_gallery": "carousel",
-        "image_size": "square",
-        "icon": "instagram",
-        "images_per_row": 6,
-        "gap": 1,
-        "columns_mobile": "2",
-        "gap_mobile": 1,
+        "column_gap_mobile": 2,
         "swipe_on_mobile": true,
-        "bg_color": "",
-        "text_color": "",
+        "link_url": "shopify://blogs/design-blog",
+        "link_text": "View All Articles",
+        "button_type": "primary",
+        "show_icon": true,
+        "bg_color": "#f8f9fa",
+        "text_color": "#2c3e50",
         "padding_top": 80,
         "padding_bottom": 80
       }
     }
   },
   "order": [
-    "slideshow_bDT8rN",
-    "scrolling_text_hgqaYM",
-    "collection_list_Xi8cjB",
-    "rich_text_LqTtq3",
-    "image_with_text_naCdkM",
-    "collection_tabs_wThRhf",
-    "testimonials_agXwmk",
-    "countdown_bar_YwkjG4",
-    "featured_product_7yD8dN",
-    "image_with_text_overlay_CAema3",
-    "gallery_grid_YyV6r3",
-    "rich_text_8T33VV",
-    "logo_list_wm3qTE",
-    "rich_text_kxYe7g",
-    "divider_XrN4rF",
-    "featured_blog_8FGqH4",
-    "divider_wiE6Jr",
-    "gallery_socical_QRe8hD"
+    "hero_slideshow",
+    "furniture_benefits_bar",
+    "furniture_categories",
+    "brand_story",
+    "design_services",
+    "featured_products_tabs",
+    "customer_testimonials",
+    "furniture_services",
+    "room_inspiration_gallery",
+    "featured_blog_8FGqH4"
   ]
 }
