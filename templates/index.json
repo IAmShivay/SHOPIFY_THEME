@@ -10,7 +10,7 @@
 {
   "sections": {
     "hero_slideshow": {
-      "type": "slideshow",
+      "type": "furniture-hero-slideshow",
       "blocks": {
         "slide_living_room": {
           "type": "slide",
@@ -185,58 +185,58 @@
       }
     },
     "furniture_categories": {
-      "type": "collection-list",
+      "type": "furniture-categories",
       "blocks": {
         "living_room_collection": {
-          "type": "featured_collection",
+          "type": "category",
           "settings": {
             "collection": "living-room",
-            "image": "{{ block.settings.collection.image }}",
+            "image": "",
             "title": "Living Room",
             "url": "shopify://collections/living-room"
           }
         },
         "bedroom_collection": {
-          "type": "featured_collection",
+          "type": "category",
           "settings": {
             "collection": "bedroom",
-            "image": "{{ block.settings.collection.image }}",
+            "image": "",
             "title": "Bedroom",
             "url": "shopify://collections/bedroom"
           }
         },
         "dining_room_collection": {
-          "type": "featured_collection",
+          "type": "category",
           "settings": {
             "collection": "dining-room",
-            "image": "{{ block.settings.collection.image }}",
+            "image": "",
             "title": "Dining Room",
             "url": "shopify://collections/dining-room"
           }
         },
         "office_collection": {
-          "type": "featured_collection",
+          "type": "category",
           "settings": {
             "collection": "office",
-            "image": "{{ block.settings.collection.image }}",
+            "image": "",
             "title": "Home Office",
             "url": "shopify://collections/office"
           }
         },
         "outdoor_collection": {
-          "type": "featured_collection",
+          "type": "category",
           "settings": {
             "collection": "outdoor",
-            "image": "{{ block.settings.collection.image }}",
+            "image": "",
             "title": "Outdoor",
             "url": "shopify://collections/outdoor"
           }
         },
         "storage_collection": {
-          "type": "featured_collection",
+          "type": "category",
           "settings": {
             "collection": "storage",
-            "image": "{{ block.settings.collection.image }}",
+            "image": "",
             "title": "Storage",
             "url": "shopify://collections/storage"
           }
@@ -483,63 +483,52 @@
       }
     },
     "customer_testimonials": {
-      "type": "testimonials",
+      "type": "furniture-testimonials",
       "blocks": {
-        "quote_sarah": {
-          "type": "quote",
+        "testimonial_sarah": {
+          "type": "testimonial",
           "settings": {
             "product": "",
             "rating": 5,
             "text": "The quality of furniture exceeded our expectations! The delivery team was professional and the assembly service made everything so easy. Our living room has never looked better.",
-            "media_size": "square",
+            "avatar": "",
             "name": "Sarah Johnson",
-            "position": "― Verified Customer"
+            "position": "Verified Customer"
           }
         },
-        "quote_michael": {
-          "type": "quote",
+        "testimonial_michael": {
+          "type": "testimonial",
           "settings": {
             "product": "",
             "rating": 5,
             "text": "Outstanding customer service and beautiful furniture. The design consultation helped us create the perfect home office. Highly recommend!",
-            "media_size": "square",
+            "avatar": "",
             "name": "Michael Chen",
-            "position": "― Verified Customer"
+            "position": "Verified Customer"
           }
         },
-        "quote_emma": {
-          "type": "quote",
+        "testimonial_emma": {
+          "type": "testimonial",
           "settings": {
             "product": "",
             "rating": 4.5,
             "text": "Love our new dining set! The craftsmanship is excellent and it fits perfectly in our space. The whole experience from selection to delivery was seamless.",
-            "media_size": "square",
+            "avatar": "",
             "name": "Emma Rodriguez",
-            "position": "― Verified Customer"
+            "position": "Verified Customer"
           }
         }
       },
       "block_order": [
-        "quote_sarah",
-        "quote_michael",
-        "quote_emma"
+        "testimonial_sarah",
+        "testimonial_michael",
+        "testimonial_emma"
       ],
       "settings": {
-        "section_width": "container",
         "subheading": "What Our Customers Say",
         "heading": "Real Reviews from Real Customers",
-        "heading_tag": "h2",
-        "heading_size_section": "h2",
         "description": "<p>Don't just take our word for it. See what our satisfied customers have to say about their furniture and shopping experience.</p>",
-        "layout": "horizontal",
-        "testimonial_type": "standard",
-        "content_alignment": "center",
-        "vertical_alignment": "center",
-        "content_size": "h5",
         "show_rating": true,
-        "show_arrows": false,
-        "auto_rotate": false,
-        "change_slides_speed": 6,
         "bg_color": "#f8f9fa",
         "text_color": "#2c3e50",
         "padding_top": 100,
@@ -550,43 +539,47 @@
       "type": "text-with-icons",
       "blocks": {
         "service_delivery": {
-          "type": "feature",
+          "type": "icon",
           "settings": {
             "icon": "truck",
-            "heading": "Free White Glove Delivery",
+            "custom_icon": "",
+            "title": "Free White Glove Delivery",
             "text": "<p>Complimentary delivery and setup for orders over $999. Our professional team will place your furniture exactly where you want it.</p>",
-            "link_label": "",
-            "link": ""
+            "button_label": "",
+            "button_link": ""
           }
         },
         "service_assembly": {
-          "type": "feature",
+          "type": "icon",
           "settings": {
             "icon": "box",
-            "heading": "Professional Assembly",
+            "custom_icon": "",
+            "title": "Professional Assembly",
             "text": "<p>Expert assembly service available for all furniture. Our trained technicians ensure your pieces are assembled safely and correctly.</p>",
-            "link_label": "",
-            "link": ""
+            "button_label": "",
+            "button_link": ""
           }
         },
         "service_warranty": {
-          "type": "feature",
+          "type": "icon",
           "settings": {
-            "icon": "lock",
-            "heading": "5-Year Quality Guarantee",
+            "icon": "sheild",
+            "custom_icon": "",
+            "title": "5-Year Quality Guarantee",
             "text": "<p>We stand behind our furniture with a comprehensive 5-year warranty covering manufacturing defects and structural issues.</p>",
-            "link_label": "",
-            "link": ""
+            "button_label": "",
+            "button_link": ""
           }
         },
         "service_financing": {
-          "type": "feature",
+          "type": "icon",
           "settings": {
-            "icon": "note",
-            "heading": "Flexible Financing Options",
+            "icon": "wallet",
+            "custom_icon": "",
+            "title": "Flexible Financing Options",
             "text": "<p>0% APR financing available for qualified customers. Make your dream furniture affordable with our flexible payment plans.</p>",
-            "link_label": "Learn More",
-            "link": "shopify://pages/financing"
+            "button_label": "Learn More",
+            "button_link": "shopify://pages/financing"
           }
         }
       },
@@ -604,10 +597,18 @@
         "heading_size_section": "h2",
         "description": "<p>From selection to delivery, we're committed to making your furniture shopping experience exceptional.</p>",
         "layout": "vertical",
-        "icon_size": 48,
-        "content_alignment": "center",
-        "columns_desktop": 4,
+        "item_type": "vertical",
+        "icon_width": 48,
+        "icon_background": "circle",
+        "icon_bg_color": "#f8f9fa",
+        "icon_color": "#2c3e50",
+        "heading_size": "h4",
+        "column_alignment": "center",
         "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "enable_overflow_visible": false,
+        "button_type": "primary",
+        "show_icon": true,
         "bg_color": "#ffffff",
         "text_color": "#2c3e50",
         "padding_top": 80,
@@ -615,111 +616,66 @@
       }
     },
     "room_inspiration_gallery": {
-      "type": "gallery-grid",
+      "type": "room-inspiration-gallery",
       "blocks": {
         "living_room_inspiration": {
-          "type": "image",
+          "type": "room",
           "settings": {
-            "use_video": false,
-            "media_size": "landscape",
+            "image": "",
+            "size": "large",
             "subheading": "Living Room",
             "heading": "Modern Comfort Meets Style",
-            "heading_size": "h3",
-            "text": "<p>Create a welcoming space for family and friends with our contemporary living room collection.</p>",
-            "button_label": "Shop Living Room",
-            "button_link": "shopify://collections/living-room",
-            "button_type": "primary-white",
-            "show_icon": true,
-            "desktop_content_position": "bottom-left",
-            "block_width": "basis-1/2",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 20,
-            "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%)"
+            "text": "Create a welcoming space for family and friends with our contemporary living room collection.",
+            "button_text": "Shop Living Room",
+            "link": "shopify://collections/living-room"
           }
         },
         "bedroom_inspiration": {
-          "type": "image",
+          "type": "room",
           "settings": {
-            "use_video": false,
-            "media_size": "landscape",
+            "image": "",
+            "size": "medium",
             "subheading": "Bedroom",
             "heading": "Your Personal Sanctuary",
-            "heading_size": "h3",
-            "text": "<p>Transform your bedroom into a peaceful retreat with our elegant furniture collections.</p>",
-            "button_label": "Shop Bedroom",
-            "button_link": "shopify://collections/bedroom",
-            "button_type": "primary-white",
-            "show_icon": true,
-            "desktop_content_position": "bottom-right",
-            "block_width": "basis-1/2",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 20,
-            "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%)"
+            "text": "Transform your bedroom into a peaceful retreat with our elegant furniture collections.",
+            "button_text": "Shop Bedroom",
+            "link": "shopify://collections/bedroom"
           }
         },
         "dining_room_inspiration": {
-          "type": "image",
+          "type": "room",
           "settings": {
-            "use_video": false,
-            "media_size": "square",
+            "image": "",
+            "size": "small",
             "subheading": "Dining Room",
             "heading": "Gather & Celebrate",
-            "heading_size": "h3",
-            "text": "<p>Make every meal special with our beautiful dining room furniture.</p>",
-            "button_label": "Shop Dining",
-            "button_link": "shopify://collections/dining-room",
-            "button_type": "primary-white",
-            "show_icon": true,
-            "desktop_content_position": "bottom-center",
-            "block_width": "basis-1/3",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 25,
-            "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.8) 100%)"
+            "text": "Make every meal special with our beautiful dining room furniture.",
+            "button_text": "Shop Dining",
+            "link": "shopify://collections/dining-room"
           }
         },
         "office_inspiration": {
-          "type": "image",
+          "type": "room",
           "settings": {
-            "use_video": false,
-            "media_size": "square",
+            "image": "",
+            "size": "small",
             "subheading": "Home Office",
             "heading": "Work in Style",
-            "heading_size": "h3",
-            "text": "<p>Create a productive workspace with our ergonomic office furniture.</p>",
-            "button_label": "Shop Office",
-            "button_link": "shopify://collections/office",
-            "button_type": "primary-white",
-            "show_icon": true,
-            "desktop_content_position": "bottom-center",
-            "block_width": "basis-1/3",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 25,
-            "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.8) 100%)"
+            "text": "Create a productive workspace with our ergonomic office furniture.",
+            "button_text": "Shop Office",
+            "link": "shopify://collections/office"
           }
         },
         "outdoor_inspiration": {
-          "type": "image",
+          "type": "room",
           "settings": {
-            "use_video": false,
-            "media_size": "square",
+            "image": "",
+            "size": "small",
             "subheading": "Outdoor",
             "heading": "Extend Your Living Space",
-            "heading_size": "h3",
-            "text": "<p>Enjoy the outdoors in comfort with our weather-resistant patio furniture.</p>",
-            "button_label": "Shop Outdoor",
-            "button_link": "shopify://collections/outdoor",
-            "button_type": "primary-white",
-            "show_icon": true,
-            "desktop_content_position": "bottom-center",
-            "block_width": "basis-1/3",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 25,
-            "overlay_gradient": "linear-gradient(180deg, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.8) 100%)"
+            "text": "Enjoy the outdoors in comfort with our weather-resistant patio furniture.",
+            "button_text": "Shop Outdoor",
+            "link": "shopify://collections/outdoor"
           }
         }
       },

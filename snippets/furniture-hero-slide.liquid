@@ -1,0 +1,72 @@
+{%- liquid
+  assign image = block.settings.image
+  assign mobile_image = block.settings.mobile_image
+  assign slide_link = block.settings.slide_link
+  assign subheading = block.settings.subheading
+  assign heading = block.settings.heading
+  assign content = block.settings.content
+  assign button_text_1 = block.settings.button_text_1
+  assign button_link_1 = block.settings.button_link_1
+  assign button_text_2 = block.settings.button_text_2
+  assign button_link_2 = block.settings.button_link_2
+  assign overlay_color = block.settings.overlay_color
+  assign overlay_opacity = block.settings.overlay_opacity
+-%}
+
+<div class="furniture-hero__slide"
+     {% if image %}
+       style="background-image: url('{{ image | image_url: width: 1920 }}');"
+     {% endif %}>
+  
+  {%- if overlay_opacity > 0 -%}
+    <div class="furniture-hero__overlay" 
+         style="background-color: {{ overlay_color }}; opacity: {{ overlay_opacity | divided_by: 100.0 }};"></div>
+  {%- endif -%}
+  
+  <div class="container mx-auto">
+    <div class="furniture-hero__content">
+      {%- if subheading != blank -%}
+        <div class="furniture-hero__subheading">{{ subheading }}</div>
+      {%- endif -%}
+      
+      {%- if heading != blank -%}
+        <h1 class="furniture-hero__heading">{{ heading }}</h1>
+      {%- endif -%}
+      
+      {%- if content != blank -%}
+        <div class="furniture-hero__description">{{ content }}</div>
+      {%- endif -%}
+      
+      {%- if button_text_1 != blank or button_text_2 != blank -%}
+        <div class="furniture-hero__buttons">
+          {%- if button_text_1 != blank -%}
+            <a href="{{ button_link_1 | default: '#' }}" 
+               class="furniture-hero__button furniture-hero__button--primary">
+              {{ button_text_1 }}
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          {%- endif -%}
+          
+          {%- if button_text_2 != blank -%}
+            <a href="{{ button_link_2 | default: '#' }}" 
+               class="furniture-hero__button furniture-hero__button--outline">
+              {{ button_text_2 }}
+            </a>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{%- if mobile_image -%}
+  <style>
+    @media (max-width: 768px) {
+      .furniture-hero__slide {
+        background-image: url('{{ mobile_image | image_url: width: 800 }}') !important;
+      }
+    }
+  </style>
+{%- endif -%}
