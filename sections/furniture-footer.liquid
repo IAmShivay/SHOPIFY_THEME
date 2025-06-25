@@ -1,0 +1,299 @@
+{{ 'furniture-footer.css' | asset_url | stylesheet_tag }}
+
+<footer class="furniture-footer">
+  <!-- Newsletter Section -->
+  <div class="furniture-footer__newsletter">
+    <div class="container mx-auto px-4">
+      <div class="furniture-footer__newsletter-content">
+        <div class="furniture-footer__newsletter-text">
+          <h3>Stay Updated with Our Latest Collections</h3>
+          <p>Get exclusive access to new arrivals, special offers, and design inspiration delivered to your inbox.</p>
+        </div>
+        <div class="furniture-footer__newsletter-form">
+          <form action="{{ routes.root_url }}contact#contact_form" method="post" class="newsletter-form">
+            <input type="hidden" name="form_type" value="customer">
+            <input type="hidden" name="utf8" value="✓">
+            <div class="furniture-footer__newsletter-input-group">
+              <input type="email" 
+                     name="contact[email]" 
+                     class="furniture-footer__newsletter-input" 
+                     placeholder="Enter your email address"
+                     required>
+              <button type="submit" class="furniture-footer__newsletter-button">
+                Subscribe
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Footer -->
+  <div class="furniture-footer__main">
+    <div class="container mx-auto px-4">
+      <div class="furniture-footer__grid">
+        
+        <!-- Company Info -->
+        <div class="furniture-footer__column">
+          <div class="furniture-footer__logo">
+            {%- if section.settings.logo -%}
+              <img src="{{ section.settings.logo | image_url: width: 200 }}" 
+                   alt="{{ shop.name }}" 
+                   class="furniture-footer__logo-image">
+            {%- else -%}
+              <h3 class="furniture-footer__logo-text">{{ shop.name }}</h3>
+            {%- endif -%}
+          </div>
+          <p class="furniture-footer__description">
+            {{ section.settings.description | default: "Creating beautiful homes with quality furniture since 1985. Your trusted partner for exceptional design and lasting comfort." }}
+          </p>
+          
+          <!-- Contact Info -->
+          <div class="furniture-footer__contact">
+            <div class="furniture-footer__contact-item">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M17.5 4.167L10 10.833L2.5 4.167" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2.5 4.167H17.5V15C17.5 15.442 17.324 15.866 17.012 16.178C16.7 16.49 16.275 16.667 15.833 16.667H4.167C3.725 16.667 3.3 16.49 2.988 16.178C2.676 15.866 2.5 15.442 2.5 15V4.167Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>{{ section.settings.email | default: 'info@furniturestore.com' }}</span>
+            </div>
+            <div class="furniture-footer__contact-item">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M18.308 15.267C18.308 15.267 16.6913 17.5003 16.1663 17.5003C15.2746 17.5003 14.9913 16.9837 13.7913 15.7837C12.5913 14.5837 12.0746 14.3003 11.1829 15.192C10.2913 16.0837 9.18294 15.0837 7.98294 13.8837C6.78294 12.6837 5.78294 11.5753 6.67461 10.6837C7.56627 9.79199 7.28294 9.27533 6.08294 8.07533C4.88294 6.87533 4.36627 6.59199 3.84961 7.48366C3.33294 8.37533 5.56627 10.0003 5.56627 10.0003C2.06627 13.5003 2.49961 16.1587 2.49961 16.1587C2.49961 17.5003 4.16627 17.5003 4.16627 17.5003H15.8329C16.6079 17.5003 18.308 15.267 18.308 15.267Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>{{ section.settings.phone | default: '1-800-FURNITURE' }}</span>
+            </div>
+            <div class="furniture-footer__contact-item">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M10 10.833C11.841 10.833 13.333 9.341 13.333 7.5C13.333 5.659 11.841 4.167 10 4.167C8.159 4.167 6.667 5.659 6.667 7.5C6.667 9.341 8.159 10.833 10 10.833Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10 1.667C8.011 1.667 6.103 2.456 4.728 3.831C3.353 5.206 2.564 7.114 2.564 9.103C2.564 11.092 3.353 13 4.728 14.375L10 18.333L15.272 14.375C16.647 13 17.436 11.092 17.436 9.103C17.436 7.114 16.647 5.206 15.272 3.831C13.897 2.456 11.989 1.667 10 1.667V1.667Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>{{ section.settings.address | default: '123 Furniture Ave, Design City, DC 12345' }}</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="furniture-footer__column">
+          <h4 class="furniture-footer__heading">Quick Links</h4>
+          <ul class="furniture-footer__links">
+            <li><a href="/collections/new-arrivals">New Arrivals</a></li>
+            <li><a href="/collections/best-sellers">Best Sellers</a></li>
+            <li><a href="/collections/sale">Sale Items</a></li>
+            <li><a href="/pages/design-services">Design Services</a></li>
+            <li><a href="/pages/financing">Financing Options</a></li>
+            <li><a href="/pages/delivery">Delivery Information</a></li>
+          </ul>
+        </div>
+
+        <!-- Shop by Room -->
+        <div class="furniture-footer__column">
+          <h4 class="furniture-footer__heading">Shop by Room</h4>
+          <ul class="furniture-footer__links">
+            <li><a href="/collections/living-room">Living Room</a></li>
+            <li><a href="/collections/bedroom">Bedroom</a></li>
+            <li><a href="/collections/dining-room">Dining Room</a></li>
+            <li><a href="/collections/office">Home Office</a></li>
+            <li><a href="/collections/outdoor">Outdoor</a></li>
+            <li><a href="/collections/storage">Storage</a></li>
+          </ul>
+        </div>
+
+        <!-- Customer Service -->
+        <div class="furniture-footer__column">
+          <h4 class="furniture-footer__heading">Customer Service</h4>
+          <ul class="furniture-footer__links">
+            <li><a href="/pages/contact">Contact Us</a></li>
+            <li><a href="/pages/shipping">Shipping Info</a></li>
+            <li><a href="/pages/returns">Returns & Exchanges</a></li>
+            <li><a href="/pages/warranty">Warranty</a></li>
+            <li><a href="/pages/assembly">Assembly Services</a></li>
+            <li><a href="/pages/faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Store Hours & Social -->
+        <div class="furniture-footer__column">
+          <h4 class="furniture-footer__heading">Visit Our Showroom</h4>
+          <div class="furniture-footer__hours">
+            <div class="furniture-footer__hours-item">
+              <span class="day">Mon - Fri:</span>
+              <span class="time">{{ section.settings.weekday_hours | default: '9:00 AM - 8:00 PM' }}</span>
+            </div>
+            <div class="furniture-footer__hours-item">
+              <span class="day">Saturday:</span>
+              <span class="time">{{ section.settings.saturday_hours | default: '9:00 AM - 6:00 PM' }}</span>
+            </div>
+            <div class="furniture-footer__hours-item">
+              <span class="day">Sunday:</span>
+              <span class="time">{{ section.settings.sunday_hours | default: '11:00 AM - 5:00 PM' }}</span>
+            </div>
+          </div>
+          
+          <!-- Social Media -->
+          <div class="furniture-footer__social">
+            <h5>Follow Us</h5>
+            <div class="furniture-footer__social-links">
+              {%- if section.settings.facebook_url != blank -%}
+                <a href="{{ section.settings.facebook_url }}" class="furniture-footer__social-link" target="_blank" rel="noopener">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  </svg>
+                </a>
+              {%- endif -%}
+              
+              {%- if section.settings.instagram_url != blank -%}
+                <a href="{{ section.settings.instagram_url }}" class="furniture-footer__social-link" target="_blank" rel="noopener">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                  </svg>
+                </a>
+              {%- endif -%}
+              
+              {%- if section.settings.twitter_url != blank -%}
+                <a href="{{ section.settings.twitter_url }}" class="furniture-footer__social-link" target="_blank" rel="noopener">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                  </svg>
+                </a>
+              {%- endif -%}
+              
+              {%- if section.settings.pinterest_url != blank -%}
+                <a href="{{ section.settings.pinterest_url }}" class="furniture-footer__social-link" target="_blank" rel="noopener">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.746-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001z"/>
+                  </svg>
+                </a>
+              {%- endif -%}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="furniture-footer__bottom">
+    <div class="container mx-auto px-4">
+      <div class="furniture-footer__bottom-content">
+        <div class="furniture-footer__copyright">
+          <p>&copy; {{ 'now' | date: '%Y' }} {{ shop.name }}. All rights reserved.</p>
+        </div>
+        <div class="furniture-footer__legal">
+          <a href="/pages/privacy-policy">Privacy Policy</a>
+          <a href="/pages/terms-of-service">Terms of Service</a>
+          <a href="/pages/accessibility">Accessibility</a>
+        </div>
+        <div class="furniture-footer__payments">
+          <span>We Accept:</span>
+          <div class="furniture-footer__payment-icons">
+            <svg width="32" height="20" viewBox="0 0 32 20" fill="none">
+              <rect width="32" height="20" rx="4" fill="#1434CB"/>
+              <path d="M13.8 6.4H18.2V13.6H13.8V6.4Z" fill="white"/>
+              <path d="M14.4 10C14.4 8.9 14.9 7.9 15.7 7.2C15.1 6.7 14.3 6.4 13.4 6.4C11.5 6.4 10 7.9 10 9.8C10 11.7 11.5 13.2 13.4 13.2C14.3 13.2 15.1 12.9 15.7 12.4C14.9 11.7 14.4 10.7 14.4 10Z" fill="white"/>
+              <path d="M22 10C22 11.9 20.5 13.4 18.6 13.4C17.7 13.4 16.9 13.1 16.3 12.6C17.1 11.9 17.6 10.9 17.6 10C17.6 9.1 17.1 8.1 16.3 7.4C16.9 6.9 17.7 6.6 18.6 6.6C20.5 6.6 22 8.1 22 10Z" fill="white"/>
+            </svg>
+            <svg width="32" height="20" viewBox="0 0 32 20" fill="none">
+              <rect width="32" height="20" rx="4" fill="#0070BA"/>
+              <path d="M8.5 6.5H10.5L12 13.5H10L9.5 11.5H7.5L7 13.5H5L6.5 6.5H8.5ZM8.5 10L8 8.5L7.5 10H8.5Z" fill="white"/>
+              <path d="M13 6.5H15V13.5H13V6.5Z" fill="white"/>
+              <path d="M16 6.5H18L19.5 10L21 6.5H23L20.5 13.5H18.5L16 6.5Z" fill="white"/>
+              <path d="M24 6.5H26V13.5H24V6.5Z" fill="white"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Furniture Footer",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Company Information"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Footer logo"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Company description",
+      "default": "Creating beautiful homes with quality furniture since 1985. Your trusted partner for exceptional design and lasting comfort."
+    },
+    {
+      "type": "text",
+      "id": "email",
+      "label": "Email address",
+      "default": "info@furniturestore.com"
+    },
+    {
+      "type": "text",
+      "id": "phone",
+      "label": "Phone number",
+      "default": "1-800-FURNITURE"
+    },
+    {
+      "type": "textarea",
+      "id": "address",
+      "label": "Store address",
+      "default": "123 Furniture Ave, Design City, DC 12345"
+    },
+    {
+      "type": "header",
+      "content": "Store Hours"
+    },
+    {
+      "type": "text",
+      "id": "weekday_hours",
+      "label": "Monday - Friday",
+      "default": "9:00 AM - 8:00 PM"
+    },
+    {
+      "type": "text",
+      "id": "saturday_hours",
+      "label": "Saturday",
+      "default": "9:00 AM - 6:00 PM"
+    },
+    {
+      "type": "text",
+      "id": "sunday_hours",
+      "label": "Sunday",
+      "default": "11:00 AM - 5:00 PM"
+    },
+    {
+      "type": "header",
+      "content": "Social Media"
+    },
+    {
+      "type": "url",
+      "id": "facebook_url",
+      "label": "Facebook URL"
+    },
+    {
+      "type": "url",
+      "id": "instagram_url",
+      "label": "Instagram URL"
+    },
+    {
+      "type": "url",
+      "id": "twitter_url",
+      "label": "Twitter URL"
+    },
+    {
+      "type": "url",
+      "id": "pinterest_url",
+      "label": "Pinterest URL"
+    }
+  ]
+}
+{% endschema %}

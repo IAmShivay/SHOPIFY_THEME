@@ -1,0 +1,398 @@
+{{ 'advanced-hero.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'advanced-hero.js' | asset_url }}" defer></script>
+
+<section class="advanced-hero" id="advanced-hero-{{ section.id }}" {% render 'section-properties' %}>
+  <div class="advanced-hero__container">
+    
+    <!-- Background Media -->
+    <div class="advanced-hero__media">
+      {%- for block in section.blocks -%}
+        <div class="advanced-hero__slide {% if forloop.first %}active{% endif %}" 
+             data-slide="{{ forloop.index0 }}"
+             {{ block.shopify_attributes }}>
+          
+          {%- if block.settings.use_video and block.settings.video_url != blank -%}
+            <!-- Video Background -->
+            <div class="advanced-hero__video-container">
+              <video class="advanced-hero__video" 
+                     autoplay 
+                     muted 
+                     loop 
+                     playsinline
+                     {% if block.settings.video_poster %}poster="{{ block.settings.video_poster | image_url: width: 1920 }}"{% endif %}>
+                <source src="{{ block.settings.video_url }}" type="video/mp4">
+                {%- if block.settings.image -%}
+                  <img src="{{ block.settings.image | image_url: width: 1920 }}" 
+                       alt="{{ block.settings.heading }}"
+                       class="advanced-hero__fallback-image">
+                {%- endif -%}
+              </video>
+            </div>
+          {%- elsif block.settings.image -%}
+            <!-- Image Background -->
+            <div class="advanced-hero__image-container">
+              <img src="{{ block.settings.image | image_url: width: 1920 }}" 
+                   alt="{{ block.settings.heading }}"
+                   class="advanced-hero__image"
+                   loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
+            </div>
+          {%- endif -%}
+          
+          <!-- Overlay -->
+          {%- if block.settings.overlay_opacity > 0 -%}
+            <div class="advanced-hero__overlay" 
+                 style="background: {{ block.settings.overlay_color }}; opacity: {{ block.settings.overlay_opacity | divided_by: 100.0 }};"></div>
+          {%- endif -%}
+          
+          <!-- Particles Effect -->
+          {%- if block.settings.enable_particles -%}
+            <div class="advanced-hero__particles" id="particles-{{ forloop.index0 }}"></div>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+    
+    <!-- Content -->
+    <div class="advanced-hero__content">
+      <div class="container mx-auto px-4">
+        <div class="advanced-hero__content-inner">
+          
+          {%- for block in section.blocks -%}
+            <div class="advanced-hero__slide-content {% if forloop.first %}active{% endif %}" 
+                 data-slide="{{ forloop.index0 }}">
+              
+              {%- if block.settings.subheading != blank -%}
+                <div class="advanced-hero__subheading" 
+                     style="color: {{ block.settings.text_color }};">
+                  {{ block.settings.subheading }}
+                </div>
+              {%- endif -%}
+              
+              {%- if block.settings.heading != blank -%}
+                <h1 class="advanced-hero__heading" 
+                    style="color: {{ block.settings.text_color }};">
+                  {{ block.settings.heading }}
+                </h1>
+              {%- endif -%}
+              
+              {%- if block.settings.description != blank -%}
+                <div class="advanced-hero__description" 
+                     style="color: {{ block.settings.text_color }};">
+                  {{ block.settings.description }}
+                </div>
+              {%- endif -%}
+              
+              {%- if block.settings.button_text_1 != blank or block.settings.button_text_2 != blank -%}
+                <div class="advanced-hero__buttons">
+                  {%- if block.settings.button_text_1 != blank -%}
+                    <a href="{{ block.settings.button_link_1 | default: '#' }}" 
+                       class="advanced-hero__button advanced-hero__button--primary">
+                      {{ block.settings.button_text_1 }}
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </a>
+                  {%- endif -%}
+                  
+                  {%- if block.settings.button_text_2 != blank -%}
+                    <a href="{{ block.settings.button_link_2 | default: '#' }}" 
+                       class="advanced-hero__button advanced-hero__button--secondary">
+                      {{ block.settings.button_text_2 }}
+                    </a>
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+              
+              {%- if block.settings.show_scroll_indicator -%}
+                <div class="advanced-hero__scroll-indicator">
+                  <div class="advanced-hero__scroll-text">Scroll to explore</div>
+                  <div class="advanced-hero__scroll-arrow">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M7 13L12 18L17 13M7 6L12 11L17 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                </div>
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+    
+    <!-- Navigation -->
+    {%- if section.blocks.size > 1 -%}
+      <div class="advanced-hero__navigation">
+        <!-- Dots -->
+        <div class="advanced-hero__dots">
+          {%- for block in section.blocks -%}
+            <button class="advanced-hero__dot {% if forloop.first %}active{% endif %}" 
+                    data-slide="{{ forloop.index0 }}"
+                    aria-label="Go to slide {{ forloop.index }}">
+              <span class="advanced-hero__dot-inner"></span>
+            </button>
+          {%- endfor -%}
+        </div>
+        
+        <!-- Arrows -->
+        <button class="advanced-hero__arrow advanced-hero__arrow--prev" 
+                aria-label="Previous slide">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        
+        <button class="advanced-hero__arrow advanced-hero__arrow--next" 
+                aria-label="Next slide">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      
+      <!-- Progress Bar -->
+      <div class="advanced-hero__progress">
+        <div class="advanced-hero__progress-bar"></div>
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const heroSection = document.getElementById('advanced-hero-{{ section.id }}');
+  if (heroSection && typeof AdvancedHero !== 'undefined') {
+    new AdvancedHero(heroSection, {
+      autoplay: {{ section.settings.autoplay | json }},
+      autoplaySpeed: {{ section.settings.autoplay_speed | times: 1000 }},
+      enableParallax: {{ section.settings.enable_parallax | json }},
+      transitionDuration: {{ section.settings.transition_duration | times: 1000 }}
+    });
+  }
+});
+</script>
+
+{% schema %}
+{
+  "name": "Advanced Hero",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "height",
+      "label": "Section height",
+      "options": [
+        {
+          "value": "small",
+          "label": "Small (500px)"
+        },
+        {
+          "value": "medium",
+          "label": "Medium (650px)"
+        },
+        {
+          "value": "large",
+          "label": "Large (800px)"
+        },
+        {
+          "value": "full",
+          "label": "Full screen"
+        }
+      ],
+      "default": "large"
+    },
+    {
+      "type": "header",
+      "content": "Animation"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Auto-rotate slides",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "autoplay_speed",
+      "min": 3,
+      "max": 10,
+      "step": 1,
+      "unit": "s",
+      "label": "Auto-rotate speed",
+      "default": 6
+    },
+    {
+      "type": "range",
+      "id": "transition_duration",
+      "min": 0.5,
+      "max": 2,
+      "step": 0.1,
+      "unit": "s",
+      "label": "Transition duration",
+      "default": 1
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_parallax",
+      "label": "Enable parallax effect",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Media"
+        },
+        {
+          "type": "checkbox",
+          "id": "use_video",
+          "label": "Use video background",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "video_url",
+          "label": "Video URL",
+          "info": "MP4 format recommended. Use a short, looping video for best performance."
+        },
+        {
+          "type": "image_picker",
+          "id": "video_poster",
+          "label": "Video poster image",
+          "info": "Shown while video loads"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Background image",
+          "info": "1920 x 800px recommended. Used as fallback for video."
+        },
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "text",
+          "id": "subheading",
+          "label": "Subheading",
+          "default": "Transform Your Space"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Beautiful Furniture for Every Home"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Discover our curated collection of premium furniture designed to make your house feel like home."
+        },
+        {
+          "type": "header",
+          "content": "Buttons"
+        },
+        {
+          "type": "text",
+          "id": "button_text_1",
+          "label": "Primary button text",
+          "default": "Shop Now"
+        },
+        {
+          "type": "url",
+          "id": "button_link_1",
+          "label": "Primary button link"
+        },
+        {
+          "type": "text",
+          "id": "button_text_2",
+          "label": "Secondary button text",
+          "default": "Learn More"
+        },
+        {
+          "type": "url",
+          "id": "button_link_2",
+          "label": "Secondary button link"
+        },
+        {
+          "type": "header",
+          "content": "Style"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "overlay_color",
+          "label": "Overlay color",
+          "default": "#000000"
+        },
+        {
+          "type": "range",
+          "id": "overlay_opacity",
+          "min": 0,
+          "max": 80,
+          "step": 5,
+          "unit": "%",
+          "label": "Overlay opacity",
+          "default": 40
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_particles",
+          "label": "Enable particle effects",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "show_scroll_indicator",
+          "label": "Show scroll indicator",
+          "default": true
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Advanced Hero",
+      "blocks": [
+        {
+          "type": "slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

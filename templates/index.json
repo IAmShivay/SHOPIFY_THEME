@@ -10,7 +10,7 @@
 {
   "sections": {
     "hero_slideshow": {
-      "type": "furniture-hero-slideshow",
+      "type": "advanced-hero",
       "blocks": {
         "slide_living_room": {
           "type": "slide",

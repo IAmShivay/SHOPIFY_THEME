@@ -1,0 +1,474 @@
+{{ 'furniture-header.css' | asset_url | stylesheet_tag }}
+<link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}">
+<link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}">
+
+<style>
+.furniture-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.furniture-header.scrolled {
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.furniture-header__top-bar {
+  background: #2c3e50;
+  color: white;
+  padding: 0.5rem 0;
+  font-size: 0.875rem;
+}
+
+.furniture-header__top-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.furniture-header__promo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.furniture-header__contact {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.furniture-header__main {
+  padding: 1rem 0;
+}
+
+.furniture-header__content {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  gap: 2rem;
+}
+
+.furniture-header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.furniture-header__logo-image {
+  max-height: 60px;
+  width: auto;
+}
+
+.furniture-header__logo-text {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+.furniture-header__nav {
+  display: flex;
+  justify-content: center;
+}
+
+.furniture-header__menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+.furniture-header__menu-item {
+  position: relative;
+}
+
+.furniture-header__menu-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0;
+  color: #2c3e50;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.furniture-header__menu-link:hover {
+  color: #e74c3c;
+}
+
+.furniture-header__menu-item.has-dropdown:hover .furniture-header__dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.furniture-header__dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  padding: 2rem;
+  min-width: 800px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.furniture-header__mega-menu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.furniture-header__mega-column h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.furniture-header__mega-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.furniture-header__mega-links li {
+  margin-bottom: 0.5rem;
+}
+
+.furniture-header__mega-links a {
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.furniture-header__mega-links a:hover {
+  color: #e74c3c;
+}
+
+.furniture-header__actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.furniture-header__search {
+  position: relative;
+}
+
+.furniture-header__search-input {
+  width: 250px;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.furniture-header__search-input:focus {
+  outline: none;
+  border-color: #e74c3c;
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+}
+
+.furniture-header__icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: transparent;
+  color: #2c3e50;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.furniture-header__icon-button:hover {
+  background: #f3f4f6;
+  color: #e74c3c;
+}
+
+.furniture-header__cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #e74c3c;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.furniture-header__mobile-toggle {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .furniture-header__content {
+    grid-template-columns: 1fr auto;
+  }
+  
+  .furniture-header__nav {
+    display: none;
+  }
+  
+  .furniture-header__mobile-toggle {
+    display: flex;
+  }
+  
+  .furniture-header__search-input {
+    width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .furniture-header__top-bar {
+    display: none;
+  }
+  
+  .furniture-header__content {
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+  
+  .furniture-header__search {
+    display: none;
+  }
+  
+  .furniture-header__actions {
+    gap: 0.5rem;
+  }
+}
+</style>
+
+<header class="furniture-header" id="furniture-header">
+  <!-- Top Bar -->
+  <div class="furniture-header__top-bar">
+    <div class="furniture-header__top-content">
+      <div class="furniture-header__promo">
+        <span>🚚 Free Delivery on Orders Over $999</span>
+        <span>•</span>
+        <span>🔧 Professional Assembly Available</span>
+      </div>
+      <div class="furniture-header__contact">
+        <span>📞 {{ section.settings.phone | default: '1-800-FURNITURE' }}</span>
+        <span>📍 {{ section.settings.location | default: 'Visit Our Showroom' }}</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Header -->
+  <div class="furniture-header__main">
+    <div class="furniture-header__content">
+      
+      <!-- Logo -->
+      <div class="furniture-header__logo">
+        <a href="{{ routes.root_url }}" class="furniture-header__logo-link">
+          {%- if section.settings.logo -%}
+            <img src="{{ section.settings.logo | image_url: width: 200 }}" 
+                 alt="{{ shop.name }}" 
+                 class="furniture-header__logo-image"
+                 width="200" height="60">
+          {%- else -%}
+            <span class="furniture-header__logo-text">{{ shop.name }}</span>
+          {%- endif -%}
+        </a>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="furniture-header__nav">
+        <ul class="furniture-header__menu">
+          <li class="furniture-header__menu-item has-dropdown">
+            <a href="#" class="furniture-header__menu-link">
+              Shop by Room
+              <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+                <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <div class="furniture-header__dropdown">
+              <div class="furniture-header__mega-menu">
+                <div class="furniture-header__mega-column">
+                  <h4>Living Room</h4>
+                  <ul class="furniture-header__mega-links">
+                    <li><a href="/collections/sofas">Sofas & Sectionals</a></li>
+                    <li><a href="/collections/coffee-tables">Coffee Tables</a></li>
+                    <li><a href="/collections/tv-stands">TV Stands</a></li>
+                    <li><a href="/collections/accent-chairs">Accent Chairs</a></li>
+                    <li><a href="/collections/living-room">View All</a></li>
+                  </ul>
+                </div>
+                <div class="furniture-header__mega-column">
+                  <h4>Bedroom</h4>
+                  <ul class="furniture-header__mega-links">
+                    <li><a href="/collections/beds">Beds & Frames</a></li>
+                    <li><a href="/collections/dressers">Dressers</a></li>
+                    <li><a href="/collections/nightstands">Nightstands</a></li>
+                    <li><a href="/collections/mattresses">Mattresses</a></li>
+                    <li><a href="/collections/bedroom">View All</a></li>
+                  </ul>
+                </div>
+                <div class="furniture-header__mega-column">
+                  <h4>Dining Room</h4>
+                  <ul class="furniture-header__mega-links">
+                    <li><a href="/collections/dining-tables">Dining Tables</a></li>
+                    <li><a href="/collections/dining-chairs">Dining Chairs</a></li>
+                    <li><a href="/collections/bar-stools">Bar Stools</a></li>
+                    <li><a href="/collections/buffets">Buffets & Hutches</a></li>
+                    <li><a href="/collections/dining-room">View All</a></li>
+                  </ul>
+                </div>
+                <div class="furniture-header__mega-column">
+                  <h4>Home Office</h4>
+                  <ul class="furniture-header__mega-links">
+                    <li><a href="/collections/desks">Desks</a></li>
+                    <li><a href="/collections/office-chairs">Office Chairs</a></li>
+                    <li><a href="/collections/bookcases">Bookcases</a></li>
+                    <li><a href="/collections/filing-cabinets">Storage</a></li>
+                    <li><a href="/collections/office">View All</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          
+          <li class="furniture-header__menu-item">
+            <a href="/collections/new-arrivals" class="furniture-header__menu-link">New Arrivals</a>
+          </li>
+          
+          <li class="furniture-header__menu-item">
+            <a href="/collections/sale" class="furniture-header__menu-link">Sale</a>
+          </li>
+          
+          <li class="furniture-header__menu-item">
+            <a href="/pages/design-services" class="furniture-header__menu-link">Design Services</a>
+          </li>
+          
+          <li class="furniture-header__menu-item">
+            <a href="/pages/about" class="furniture-header__menu-link">About</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Actions -->
+      <div class="furniture-header__actions">
+        <!-- Search -->
+        <div class="furniture-header__search">
+          <input type="text" 
+                 class="furniture-header__search-input" 
+                 placeholder="Search furniture..."
+                 id="furniture-search">
+        </div>
+
+        <!-- Account -->
+        <a href="{{ routes.account_url }}" class="furniture-header__icon-button" title="Account">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M16.667 17.5V15.833C16.667 14.949 16.316 14.101 15.691 13.476C15.066 12.851 14.217 12.5 13.333 12.5H6.667C5.783 12.5 4.934 12.851 4.309 13.476C3.684 14.101 3.333 14.949 3.333 15.833V17.5M13.333 5.833C13.333 7.674 11.841 9.167 10 9.167C8.159 9.167 6.667 7.674 6.667 5.833C6.667 3.992 8.159 2.5 10 2.5C11.841 2.5 13.333 3.992 13.333 5.833Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+
+        <!-- Wishlist -->
+        <button class="furniture-header__icon-button" title="Wishlist">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M17.367 3.842C16.884 3.358 16.307 2.978 15.672 2.724C15.037 2.47 14.357 2.347 13.672 2.361C12.987 2.375 12.312 2.527 11.688 2.808C11.064 3.089 10.504 3.494 10.042 4C9.579 3.494 9.019 3.089 8.395 2.808C7.771 2.527 7.096 2.375 6.411 2.361C5.726 2.347 5.046 2.47 4.411 2.724C3.776 2.978 3.199 3.358 2.716 3.842C1.728 4.83 1.178 6.178 1.178 7.583C1.178 8.988 1.728 10.336 2.716 11.324L10.042 18.65L17.367 11.324C18.355 10.336 18.905 8.988 18.905 7.583C18.905 6.178 18.355 4.83 17.367 3.842V3.842Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+
+        <!-- Cart -->
+        <a href="{{ routes.cart_url }}" class="furniture-header__icon-button" title="Cart">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M2.5 2.5H4.167L6.4 12.933C6.476 13.295 6.674 13.621 6.963 13.856C7.252 14.091 7.614 14.221 7.987 14.225H16.167C16.54 14.221 16.902 14.091 17.191 13.856C17.48 13.621 17.678 13.295 17.754 12.933L19.167 5.833H5M8.333 17.5C8.333 18.421 7.588 19.167 6.667 19.167C5.746 19.167 5 18.421 5 17.5C5 16.579 5.746 15.833 6.667 15.833C7.588 15.833 8.333 16.579 8.333 17.5ZM18.333 17.5C18.333 18.421 17.588 19.167 16.667 19.167C15.746 19.167 15 18.421 15 17.5C15 16.579 15.746 15.833 16.667 15.833C17.588 15.833 18.333 16.579 18.333 17.5Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          {%- if cart.item_count > 0 -%}
+            <span class="furniture-header__cart-count">{{ cart.item_count }}</span>
+          {%- endif -%}
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="furniture-header__icon-button furniture-header__mobile-toggle" id="mobile-menu-toggle">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M2.5 10H17.5M2.5 5H17.5M2.5 15H17.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const header = document.getElementById('furniture-header');
+  
+  // Scroll effect
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 100) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+  
+  // Search functionality
+  const searchInput = document.getElementById('furniture-search');
+  if (searchInput) {
+    searchInput.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        window.location.href = `/search?q=${encodeURIComponent(this.value)}`;
+      }
+    });
+  }
+});
+</script>
+
+{% schema %}
+{
+  "name": "Furniture Header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo image"
+    },
+    {
+      "type": "text",
+      "id": "phone",
+      "label": "Phone number",
+      "default": "1-800-FURNITURE"
+    },
+    {
+      "type": "text",
+      "id": "location",
+      "label": "Location text",
+      "default": "Visit Our Showroom"
+    }
+  ]
+}
+{% endschema %}
